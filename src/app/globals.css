@@ -1,27 +1,82 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    padding-right: 13px;
+    gap: 1.25rem;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  
+  .navbar h1 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
   }
-}
+  
+  .navbar h1:hover {
+    color: rgb(255, 123, 0);
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem; 
+  }
+  
+  .navbar a {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: rgb(255, 123, 0);
+  }
+  @media (min-width: 768px) {
+    .navbar {
+      padding: 1rem;
+    }
+  
+    .navbar h1 {
+      font-size:2.10rem;
+    }
+  
+    .navbar .nav-links {
+      gap: 2.5rem; 
+    }
+  
+    .navbar a {
+      font-size: 1.27rem;
+    }
+  }
+  
+  /* General styles for pages */
+  .page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page-title {
+    margin-top: 7rem;
+    font-family: serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .icon {
+    margin-top: 5.8rem;
+    font-size: 2.5rem;
+    color: rgb(255, 123, 0);
+  }
+  
+  /* Media queries for page title */
+  @media (min-width: 768px) {
+    .page-title {
+      font-size: 3rem;
+    }
+  }
+  
